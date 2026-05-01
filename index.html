@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorrigeFast | Tecnologia em Correção de Provas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e293b;
+            --accent: #10b981;
+            --text: #334155;
+            --light: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--light); }
+
+        /* Header Moderno */
+        header {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); letter-spacing: -1px; }
+
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        .btn-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5% 60px;
+            text-align: center;
+            background: linear-gradient(180deg, #fff 0%, #f1f5f9 100%);
+        }
+
+        .hero h1 { font-size: 3rem; color: var(--secondary); margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
+
+        /* Seção de Parceria (O Coração do Exército) */
+        .partners { padding: 80px 5%; background: white; text-align: center; }
+        .grid-partners {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; }
+
+        /* Estilo para Inputs (Autocomplete OFF como solicitado) */
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        footer { background: var(--secondary); color: white; padding: 40px 5%; text-align: center; }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">CorrigeFast</div>
+    <nav>
+        <ul>
+            <li><a href="#solucao">O App</a></li>
+            <li><a href="#vendedores">Seja Vendedor</a></li>
+            <li><a href="#influencers">Influenciadores</a></li>
+            <li><a href="#seguranca">Segurança</a></li>
+            <li><a href="#contato" class="btn-cta">Baixar Agora</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Corrija Provas em Segundos</h1>
+    <p>Tecnologia de scanner inteligente para professores que valorizam seu tempo. Precisão máxima, esforço zero.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center;">
+        <button class="btn-cta" style="border:none; cursor:pointer;">Experimentar Grátis</button>
+        <button style="padding: 0.6rem 1.2rem; border-radius: 8px; border: 1px solid var(--primary); background: none; color: var(--primary); font-weight: 600; cursor: pointer;">Ver Planos</button>
+    </div>
+</section>
+
+<section id="vendedores" class="partners">
+    <h2>Nosso Exército de Parceiros</h2>
+    <p>A melhor comissão do mercado SaaS com repasse via Split Automático.</p>
+    
+    <div class="grid-partners">
+        <div class="card">
+            <h3>Influenciadores</h3>
+            <p>Comissão de R$ 50,00 por venda. Pagamento imediato e material pronto para postar.</p>
+        </div>
+        <div class="card">
+            <h3>Representantes</h3>
+            <p>Venda para escolas e instituições. Alta escala e suporte técnico direto.</p>
+        </div>
+        <div class="card">
+            <h3>Home Office</h3>
+            <p>Trabalhe de onde quiser. Gestão de vendas 100% online via painel exclusivo.</p>
+        </div>
+    </div>
+</section>
+
+<section id="seguranca" style="padding: 80px 5%; text-align: center; background: #f1f5f9;">
+    <h2>Sua Conta Protegida</h2>
+    <p>Utilizamos tecnologia de <strong>Device Binding</strong>: sua licença é vinculada ao seu aparelho, garantindo exclusividade e segurança total dos seus dados.</p>
+</section>
+
+<section id="contato" style="padding: 80px 5%; max-width: 600px; margin: 0 auto;">
+    <h2 style="text-align:center;">Fale Conosco</h2>
+    <form id="contactForm">
+        <div class="form-group">
+            <input type="text" placeholder="Seu Nome" autocomplete="off">
+            <input type="email" placeholder="Seu E-mail" autocomplete="off">
+            <select style="width:100%; padding: 0.8rem; border-radius:6px; margin-bottom:1rem; border:1px solid #cbd5e1;">
+                <option value="">Eu quero...</option>
+                <option value="buy">Comprar Licença (R$ 119/ano)</option>
+                <option value="partner">Ser um Parceiro (Comissão R$ 50)</option>
+                <option value="support">Suporte Técnico</option>
+            </select>
+            <button type="submit" class="btn-cta" style="width:100%; border:none; cursor:pointer;">Enviar Mensagem</button>
+        </div>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 CorrigeFast - Uma empresa Plata4four. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Script simples para demonstrar interação
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Obrigado pelo contato! Nossa equipe de homologação entrará em contato em breve.');
+    });
+
+    // Smooth Scroll para os menus
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
