@@ -44,11 +44,42 @@
             transition: transform 0.2s;
         }
 
-        /* Hero Section */
+        /* Seções Full Screen */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 5%;
+        }
+
         .hero {
-            padding: 100px 5% 60px;
+            background-image: url('secaodois.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
-            background: linear-gradient(180deg, #fff 0%, #f1f5f9 100%);
+        }
+
+        .secao-home {
+            position: relative;
+            background-image: url('paginainicial.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Overlay para garantir contraste do texto no centro */
+        .secao-home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
         }
 
         .hero h1 { font-size: 3rem; color: var(--secondary); margin-bottom: 1rem; }
@@ -91,46 +122,33 @@
     </style>
 </head>
 <body>
-
 <header>
     <div class="logo">CorrigeFast</div>
     <nav>
         <ul>
+            <li><a href="#home">Página Inicial</a></li>
             <li><a href="#solucao">O App</a></li>
-            <li><a href="#vendedores">Seja Vendedor</a></li>
-            <li><a href="#influencers">Influenciadores</a></li>
             <li><a href="#seguranca">Segurança</a></li>
             <li><a href="#contato" class="btn-cta">Baixar Agora</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="hero">
+<section id="home" class="secao-home">
+    <div style="max-width: 900px; text-align: center; position: relative; z-index: 10;">
+        <img src="logo.png" alt="CorrigeFast Logo" style="width: 180px; height: auto; margin-bottom: 2rem; display: inline-block; transform: scale(3.2); position: relative; top: 10px;">
+<h1 style="font-size: 3.5rem; color: var(--secondary); position: absolute; top: 240px; right: -46%; transform: translateX(-50%); white-space: nowrap; width: 100%; z-index: 11;">Bem-vindo ao Futuro da Educação</h1>        
+<p style="font-size: 1.4rem; color: var(--text); margin-top: 130px; margin-bottom: 2rem;">Estamos felizes em ter você aqui. A CorrigeFast foi criada para transformar horas de trabalho manual em minutos de liberdade e precisão.</p>
+        <a href="#solucao" class="btn-cta" style="text-decoration: none; display: inline-block;">Conhecer a Ferramenta</a>
+    </div>
+</section>
+
+<section id="solucao" class="hero">
     <h1>Corrija Provas em Segundos</h1>
     <p>Tecnologia de scanner inteligente para professores que valorizam seu tempo. Precisão máxima, esforço zero.</p>
     <div style="display: flex; gap: 1rem; justify-content: center;">
         <button class="btn-cta" style="border:none; cursor:pointer;">Experimentar Grátis</button>
         <button style="padding: 0.6rem 1.2rem; border-radius: 8px; border: 1px solid var(--primary); background: none; color: var(--primary); font-weight: 600; cursor: pointer;">Ver Planos</button>
-    </div>
-</section>
-
-<section id="vendedores" class="partners">
-    <h2>Nosso Exército de Parceiros</h2>
-    <p>A melhor comissão do mercado SaaS com repasse via Split Automático.</p>
-    
-    <div class="grid-partners">
-        <div class="card">
-            <h3>Influenciadores</h3>
-            <p>Comissão de R$ 50,00 por venda. Pagamento imediato e material pronto para postar.</p>
-        </div>
-        <div class="card">
-            <h3>Representantes</h3>
-            <p>Venda para escolas e instituições. Alta escala e suporte técnico direto.</p>
-        </div>
-        <div class="card">
-            <h3>Home Office</h3>
-            <p>Trabalhe de onde quiser. Gestão de vendas 100% online via painel exclusivo.</p>
-        </div>
     </div>
 </section>
 
@@ -148,7 +166,6 @@
             <select style="width:100%; padding: 0.8rem; border-radius:6px; margin-bottom:1rem; border:1px solid #cbd5e1;">
                 <option value="">Eu quero...</option>
                 <option value="buy">Comprar Licença (R$ 119/ano)</option>
-                <option value="partner">Ser um Parceiro (Comissão R$ 50)</option>
                 <option value="support">Suporte Técnico</option>
             </select>
             <button type="submit" class="btn-cta" style="width:100%; border:none; cursor:pointer;">Enviar Mensagem</button>
@@ -157,7 +174,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2026 CorrigeFast - Uma empresa Plata4four. Todos os direitos reservados.</p>
+    <p>&copy; 2026 CorrigeFast - CNPJ. Todos os direitos reservados.</p>
 </footer>
 
 <script>
